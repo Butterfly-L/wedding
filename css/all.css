@@ -186,6 +186,26 @@ button:hover {
   margin-bottom: 30px;
 }
 
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
 .hero {
   height: calc(100vh - 250px);
 }
@@ -194,6 +214,15 @@ button:hover {
   height: 100%;
   padding: 30px;
   padding: 100px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .hero .left {

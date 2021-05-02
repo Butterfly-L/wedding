@@ -1,0 +1,7 @@
+{
+    "diffEditor.wordWrap": "on",
+    "files.autoSave": "onWindowChange",
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "html.format.indentHandlebars": true
+}

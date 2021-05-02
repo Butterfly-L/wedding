@@ -14,6 +14,9 @@
 <body class="position-relative">
     <div class="hero">
         <div class="sec display-flex justify-content-center align-items-center">
+            <div class="mobile">
+                <button><span>我要參加！</span></button>
+            </div>
             <div class="left position-relative display-flex align-items-center">
                 <div class="card-wrapper position-relative">
                     <div class="card">
@@ -44,9 +47,10 @@
                         <h1>文定之喜</h1>
                     </div>
                     <div class="des">2021/07/18 | 林皇宮 花園酒店</div>
-                    <button><span>我要參加！</span></button>
+                    <button class="desktop"><span>我要參加！</span></button>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -176,7 +180,12 @@
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="card display-flex justify-content-center">
-                <form action="" class="display-flex flex-column align-items-center">
+                <!-- <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeeBzp5fMTCiEt6kprKvlzktStFTUAeRUgAbRaImwzoJQdYMw/viewform?embedded=true"
+                    width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe> -->
+
+                <form action="return false;" onclick="sendEmail" method="post"
+                    class="display-flex flex-column align-items-center">
                     <div class="title">
                         <h2>出席統計</h2>
                     </div>
@@ -259,6 +268,10 @@
     <!-- <script src="./supportCheck.js"></script> -->
 
     <!-- <script src="./main.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./order.js"></script>
 
 
 </body>
