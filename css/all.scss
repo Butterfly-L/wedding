@@ -189,7 +189,7 @@
 }
 
 .content-wrapper:hover .hero-title>img {
-  // animation: titleFlower 1s ease-in infinite;
+  animation: titleFlower 1s ease-in infinite;
 }
 
 @keyframes titleFlower {
@@ -369,7 +369,7 @@
     background-color: $light-yellow2;
     opacity: 1;
     left: 75%;
-    // animation: light1 10s ease-in-out infinite;
+    animation: light1 10s ease-in-out infinite;
     animation-delay: 3s;
 
   }
@@ -379,19 +379,19 @@
 
     .light:nth-child(1) {
       width: 100px;
-      // animation: light 5s ease-in infinite;
+      animation: light 5s ease-in infinite;
       animation-delay: 0.5s;
     }
 
     .light:nth-child(2) {
       width: 50px;
-      // animation: light 3s ease-in infinite;
+      animation: light 3s ease-in infinite;
       animation-delay: 3s;
     }
 
     .light:nth-child(3) {
       width: 30px;
-      // animation: light 3s ease-in infinite;
+      animation: light 3s ease-in infinite;
       animation-delay: 1s;
     }
   }

@@ -487,6 +487,11 @@ textarea {
   }
 }
 
+.content-wrapper:hover .hero-title > img {
+  -webkit-animation: titleFlower 1s ease-in infinite;
+          animation: titleFlower 1s ease-in infinite;
+}
+
 @-webkit-keyframes titleFlower {
   0% {
     -webkit-transform: scale(1);
@@ -682,6 +687,8 @@ textarea {
   background-color: #fcdd76;
   opacity: 1;
   left: 75%;
+  -webkit-animation: light1 10s ease-in-out infinite;
+          animation: light1 10s ease-in-out infinite;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
@@ -692,18 +699,24 @@ textarea {
 
 .light-wrapper .light-group .light:nth-child(1) {
   width: 100px;
+  -webkit-animation: light 5s ease-in infinite;
+          animation: light 5s ease-in infinite;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
 .light-wrapper .light-group .light:nth-child(2) {
   width: 50px;
+  -webkit-animation: light 3s ease-in infinite;
+          animation: light 3s ease-in infinite;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
 .light-wrapper .light-group .light:nth-child(3) {
   width: 30px;
+  -webkit-animation: light 3s ease-in infinite;
+          animation: light 3s ease-in infinite;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
