@@ -51,6 +51,7 @@ button {
     padding: 15px;
     font-size: 24px;
     font-family: 'Noto Sans TC', sans-serif;
+    transition: 0.8s;
 
     span {
         position: relative;
@@ -81,7 +82,7 @@ button {
 
     &:hover {
         box-shadow: 5px 5px 8px rgba(32, 32, 32, 0.3);
-        color: $blue;
+        color: $red;
         // font-weight: bold;
     }
 
@@ -89,11 +90,14 @@ button {
 }
 
 .title {
-    border-width: 5px;
-    border-color: $red;
-    border-style: double none;
+    // border-width: 5px;
+    // border-color: $red;
+    // border-style: double none;
     padding: 15px;
     margin: 12px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-image: url(../img/red-border.svg) 20 0 round;
 
 }
 
@@ -206,4 +210,53 @@ button {
         display: none;
 
     }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input,
+input:valid,
+input:focus,
+input:-webkit-autofill,
+select,
+textarea,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background: $strong-yellow !important;
+    border-radius: 10px;
+    padding: 5px 5px;
+
+    color: $blue;
+    font-size: 20px;
+    min-height: 24px;
+    border: 0px;
+
+
+    @media screen and (max-width:768px) {
+        font-size: 16px;
+    }
+}
+
+input:-webkit-autofill {
+    background: $strong-yellow !important;
+    border-radius: 10px;
+    padding: 5px 5px;
+
+    color: pink;
+    font-size: 20px;
+    min-height: 24px;
+    border: 0px;
+
+}
+
+textarea {
+    height: 60px;
 }

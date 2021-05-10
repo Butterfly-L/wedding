@@ -1,28 +1,26 @@
-function sendEmail(){
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "liawyudye@gmail.com",
-    Password: "ztkmkuwslfvipifn",
-    To: 'butterfly.liaw@gmail.com',
-    From: "liawyudye@gmail.com",
-    Subject: "Sending Email using javascript",
-    Body: "Well that was easy!!",
-  })
-    .then(function (message) {
-      alert("mail sent successfully")
-    });
-
-
-}
-
 function postForm(){
+    const form = document.getElementById('form');
+    const nameValue = form.elements.nameValue.value;
+    const relationValue = form.elements.relationValue.value;
+    const attendanceValue = form.elements.attendanceValue.value;
+    const childrenChairValue = form.elements.childrenChairValue.value;
+    const receiveMethodValue = form.elements.receiveMethodValue.value;
+    const emailValue = form.elements.emailValue.value;
+    const addressValue = form.elements.addressValue.value;
+    const phoneValue = form.elements.phoneValue.value;
+    const messageValue = form.elements.messageValue.value;
   
     var data = {
-        'name' : 'name1',
-        'phone': 'phone1',
-        'time': 'filltime1',
-        'order': 'order1',
-        'price': 'price1',
+        'nameValue' : nameValue,
+        'relationValue': relationValue,
+        'attendanceValue': attendanceValue,
+        'childrenChairValue':childrenChairValue,
+        'receiveMethodValue':receiveMethodValue,
+        'emailValue':emailValue,
+        'addressValue':addressValue,
+        'phoneValue':phoneValue,
+        'messageValue':messageValue,
+        
         }
 
   
@@ -51,5 +49,3 @@ function postForm(){
     }
   });
 };
-
-postForm()

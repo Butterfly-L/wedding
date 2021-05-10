@@ -12,11 +12,6 @@
   width: 100%;
   height: calc(100vh - 250px);
 
-  // background: linear-gradient(77deg, rgba(255, 246, 217, 1) 44%, rgba(252, 221, 118, 1) 49%, rgba(255, 246, 217, 1) 54%);
-  // ;
-  // TODO: 之後再把打開
-  // animation: hero-bg 10s ease-out infinite;
-  // animation-delay: 3s;
   @media screen and (max-width:768px) {
     height: 800px;
     overflow: hidden;
@@ -152,6 +147,9 @@
     .content-wrapper {
       width: 300px;
       margin-bottom: 0;
+      cursor: pointer;
+
+
 
       @media screen and (max-width:768px) {
         transform: scale(0.8);
@@ -186,6 +184,25 @@
     }
 
 
+  }
+
+}
+
+.content-wrapper:hover .hero-title>img {
+  // animation: titleFlower 1s ease-in infinite;
+}
+
+@keyframes titleFlower {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.1)
+  }
+
+  100% {
+    transform: scale(1.0)
   }
 
 }
@@ -333,7 +350,8 @@
 // Start of light
 
 .light-wrapper {
-  position: fixed;
+  position: absolute;
+  overflow: hidden;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -345,26 +363,74 @@
   }
 
   .light {
-    width: 300px;
+    width: 200px;
     height: 100%;
     transform: skew(20deg);
-    // background-color: $light-yellow2;
     background-color: $light-yellow2;
-    opacity: .8;
+    opacity: 1;
+    left: 75%;
+    // animation: light1 10s ease-in-out infinite;
+    animation-delay: 3s;
 
   }
 
   .light-group {
-    width: 15%;
+    width: 30%;
 
     .light:nth-child(1) {
       width: 100px;
+      // animation: light 5s ease-in infinite;
+      animation-delay: 0.5s;
     }
 
     .light:nth-child(2) {
       width: 50px;
+      // animation: light 3s ease-in infinite;
+      animation-delay: 3s;
+    }
+
+    .light:nth-child(3) {
+      width: 30px;
+      // animation: light 3s ease-in infinite;
+      animation-delay: 1s;
     }
   }
+}
+
+@keyframes light1 {
+  0% {
+    width: 50px;
+    opacity: 0;
+    left: 75%;
+  }
+
+  50% {
+    width: 400px;
+    opacity: 0.7;
+    left: 60%;
+  }
+
+  100% {
+    width: 700px;
+    opacity: 0;
+    left: 50%;
+  }
+
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+
 }
 
 // *************
@@ -374,6 +440,7 @@
   width: 100%;
   height: 500px;
   margin-bottom: -125px;
+  overflow: hidden;
 
   // overflow: hidden;
   @media screen and (max-width:768px) {
@@ -396,13 +463,6 @@
 
     }
 
-    .content-wrapper {
-      @media screen and (max-width:768px) {
-        margin-top: -60px;
-
-      }
-
-    }
 
     .title {
       position: relative;
@@ -435,8 +495,11 @@
       margin-bottom: 0;
       margin-left: 20%;
       padding-top: 60px;
+      z-index: 2;
+
 
       @media screen and (max-width:768px) {
+        margin-top: -60px;
         margin-left: 0;
         padding-top: 0px;
         width: 100%;
@@ -456,6 +519,7 @@
         animation: sec-1-pic-small 4s ease-in-out infinite;
         bottom: 5%;
         left: -60%;
+        z-index: -1;
 
         @media screen and (max-width:768px) {
           transform: scale(.6);
@@ -654,9 +718,10 @@
     padding-top: 100px;
     height: 450px;
     background: $green;
+    width: 100%;
 
     @media screen and (max-width:768px) {
-      height: 1040px;
+      height: 1000px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -666,14 +731,32 @@
     }
 
     .wrapper {
-      width: 100%;
 
-      @media screen and (max-width:768px) {
-        order: 2;
-        transform-origin: 25% 0;
-        transform: scale(.8);
+
+      &:first-child {
+        @media screen and (max-width:768px) {
+          width: 125%;
+          order: 3;
+          transform-origin: 50% 0;
+          transform: scale(.8);
+          margin-bottom: -50px;
+
+        }
 
       }
+
+      &:nth-child(3) {
+        @media screen and (max-width:768px) {
+          order: 2;
+          transform-origin: 50% 0;
+          transform: scale(.8);
+          margin-bottom: -50px;
+
+        }
+
+      }
+
+
 
       .parent-title {
         height: 24px;
@@ -698,9 +781,7 @@
 
         @media screen and (max-width:768px) {}
       }
-    }
 
-    .wrapper {
       .parents-2 {
         width: 350px;
         height: 350px;
@@ -713,12 +794,15 @@
     }
 
 
+
     .content-wrapper {
       width: 500px;
 
       @media screen and (max-width:768px) {
         order: 1;
-        transform: scale(.8)
+        transform: scale(.8);
+        width: auto;
+        margin-bottom: 0;
       }
 
       .vege {
@@ -727,20 +811,18 @@
         }
       }
 
-      @media screen and (max-width:768px) {
-        width: auto;
-        margin-bottom: 0;
+      .title {
+        width: 450px;
+
+        @media screen and (max-width:768px) {
+          width: auto;
+
+        }
       }
+
     }
 
-    .title {
-      width: 450px;
 
-      @media screen and (max-width:768px) {
-        width: auto;
-
-      }
-    }
   }
 
   .bubble-wrapper {
@@ -827,6 +909,13 @@
   background-position: 350% 0;
   background-size: 110%;
 
+  .content-wrapper {
+    @media screen and (max-width:768px) {
+      transform: scale(.8);
+      transform-origin: 50% 0;
+    }
+  }
+
   iframe {
 
     @media screen and (max-width:768px) {
@@ -865,6 +954,9 @@
 
       @media screen and (max-width:768px) {
         width: auto;
+        transform: scale(.8);
+        transform-origin: 50% 0;
+
       }
 
     }
@@ -878,33 +970,57 @@
     }
 
     .card {
-      min-height: 800px;
+      min-height: 1000px;
       margin-bottom: 100px;
       padding-bottom: 100px;
       background: $light-yellow2;
 
       @media screen and (max-width:768px) {
-        min-height: 1000px;
-        width: 80%;
+        min-height: 1020px;
+        width: 100%;
+        transform: scale(.8);
+        padding-bottom: 0px;
+        margin-top: -200px;
+        margin-bottom: -50px;
       }
 
-      .title {
-        width: 200px;
-      }
+      form {
+        width: 100%;
 
-      .question-wrapper {
-        padding: 0 30px;
+        .title {
+          width: 200px;
+        }
 
-        .question {
-          margin: 10px 0;
+        .question-wrapper {
+          padding: 0 30px;
+          width: 100%;
 
-          label {
-            margin-bottom: 10px;
+          @media screen and (max-width:768px) {
+            padding: 0 0px;
+          }
+
+          .question {
+            margin: 10px 0;
+
+            label {
+              margin-bottom: 10px;
+            }
           }
         }
       }
+
     }
   }
+
+  .carousel {
+    width: 100%;
+    height: 300px;
+
+    background: url(../img/3-1.jpg);
+    background-size: cover;
+
+  }
+
 }
 
 
@@ -917,4 +1033,23 @@
   background: $green;
   bottom: 0;
   z-index: 5;
+
+  @media screen and (max-width:768px) {
+    font-size: 16px;
+  }
+}
+
+.credit {
+  background: darkgray;
+
+  a:link,
+  a:hover,
+  a:active,
+  a:visited {
+    font-size: 12px;
+    line-height: 12px;
+    color: black;
+  }
+
+
 }
