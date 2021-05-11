@@ -1,3 +1,5 @@
+
+
 function postForm(){
     const form = document.getElementById('form');
     const nameValue = form.elements.nameValue.value;
@@ -24,11 +26,8 @@ function postForm(){
         }
 
   
-  const uri = `https://script.google.com/macros/s/AKfycbzFmI8qxvMj_OMYcxDEdZYho4rUzp8R7KNLCeEccScYvhz5r4o1GzkuxSZwDxMWvT3g1Q/exec`;
+  const uri = `https://script.google.com/macros/s/AKfycbxrKMpsU2tS79LEm-_-siwuAxHKsPVHQYxpQDQnh_wdG6f26T0P3M82Q__YC_Lq204XwQ/exec`;
 
-  // fetch(uri, { method: "GET", mode:'cors', data: data, dataType: "jsonp" })
-  // fetch(`${cors}${uri}`, { method: "GET", data: data, dataType: "jsonp"})
-    
 
   $.ajax({
     // 這邊用get type
@@ -48,4 +47,20 @@ function postForm(){
       alert('感謝您的訂購！！');
     }
   });
+
+
+    Email.send({
+      // Host : "smtp.gmail.com",
+      SecureToken:"fabfdf20-8177-4f1e-bd0e-05affb316008",
+      To : 'yudye.liaw@gmail.com',
+      From : "yudye.liaw@gmail.com",
+      Subject : "This is the subject",
+      Body : JSON.stringify(data)
+    })
+    .then(
+    () => alert('sent')
+    );
+    
 };
+
+
