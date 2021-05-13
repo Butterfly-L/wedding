@@ -45,7 +45,7 @@ let mobieBgIndex = 0
 endMobileBg = function(){
     const cards = document.querySelectorAll('.carousel>.img');
 
-    mobieBgIndex > 3 ?  mobieBgIndex=0 : mobieBgIndex+= 1
+    mobieBgIndex > 2 ?  mobieBgIndex=0 : mobieBgIndex+= 1
 
     cards.forEach((card, index)=>{
         if (index == mobieBgIndex) cards[index].style.opacity = 1;
@@ -56,4 +56,18 @@ endMobileBg = function(){
 // setInterval(()=>{heroBg()}, 3000)
 setInterval(()=>{
     heroBg()
-    endMobileBg()}, 3000)
+    endMobileBg()
+}
+    , 3000)
+
+
+
+    const cta = document.querySelector('.mobile.cta')
+    const form = document.querySelector('form')
+    const formHeight = form.scrollHeight
+    document.addEventListener('scroll',()=>{
+        let scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+        scrollTop > formHeight ? 
+            cta.style.display = "none" : cta.style.display = "block"
+    })
+ 
