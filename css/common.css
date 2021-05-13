@@ -99,6 +99,8 @@ button:hover {
   border-radius: 40px;
   -webkit-box-shadow: 5px 5px 8px rgba(32, 32, 32, 0.3);
           box-shadow: 5px 5px 8px rgba(32, 32, 32, 0.3);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .content-wrapper {
