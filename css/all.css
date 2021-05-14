@@ -362,8 +362,8 @@ textarea {
 }
 
 .hero .left .card-wrapper .flower {
-  bottom: -300px;
-  left: -35%;
+  bottom: -410px;
+  left: -12%;
   position: absolute;
   -webkit-transform: rotate(230deg) translate(40%, 0px);
           transform: rotate(230deg) translate(40%, 0px);
@@ -701,17 +701,17 @@ textarea {
 }
 
 .light-wrapper .light {
-  width: 200px;
+  width: 50px;
   height: 100%;
   -webkit-transform: skew(20deg);
           transform: skew(20deg);
   background-color: #fcdd76;
-  opacity: 1;
+  opacity: 0;
   left: 75%;
+  -webkit-transition: 3s;
+  transition: 3s;
   -webkit-animation: light1 10s ease-in-out infinite;
           animation: light1 10s ease-in-out infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 .light-wrapper .light-group {
@@ -1323,6 +1323,7 @@ textarea {
             transform: scale(0.8);
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
+    margin-bottom: -100px;
   }
 }
 
@@ -1387,12 +1388,9 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .sec-3 .right .card {
-    width: 100%;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    padding-bottom: 0px;
-    margin-top: -200px;
-    margin-bottom: -50px;
+    width: 80%;
+    padding-bottom: 100px;
+    margin-top: 40px;
   }
 }
 
@@ -1457,7 +1455,8 @@ textarea {
 @media screen and (max-width: 768px) {
   .sec-3 .carousel .img:nth-child(1) {
     background-position: bottom;
-    background-size: 150%;
+    background-repeat: no-repeat;
+    background-size: cover;
     opacity: 1;
   }
 }
@@ -1472,8 +1471,9 @@ textarea {
 @media screen and (max-width: 768px) {
   .sec-3 .carousel .img:nth-child(2) {
     background-position: bottom;
-    background-size: 150%;
-    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
   }
 }
 
@@ -1487,8 +1487,9 @@ textarea {
 @media screen and (max-width: 768px) {
   .sec-3 .carousel .img:nth-child(3) {
     background-position: bottom;
-    background-size: 150%;
-    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
   }
 }
 
@@ -1502,8 +1503,9 @@ textarea {
 @media screen and (max-width: 768px) {
   .sec-3 .carousel .img:nth-child(4) {
     background-position: bottom;
-    background-size: 150%;
-    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
   }
 }
 
