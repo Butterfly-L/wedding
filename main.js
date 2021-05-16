@@ -1,15 +1,3 @@
-$("#twzipcode").twzipcode();
-$('#twzipcode').twzipcode({
-    // 依序套用至縣市、鄉鎮市區及郵遞區號框
-    'css': ['county', 'district', 'zipcode']
-});
-
-// $('#slider').slider();
-// $('#slider').slider({
-//     autoPlay: true,
-//     delay: 5000 // interval
-//   });
-
 let cardNo = [4,3,2,1,0]
 
 heroBg = function(){
@@ -61,13 +49,29 @@ setInterval(()=>{
     , 3000)
 
 
-
-    const cta = document.querySelector('.mobile.cta')
-    const form = document.querySelector('form')
-    const formHeight = form.scrollHeight
+    const ctaMobile = document.querySelector('.mobile.cta')
+    const form = document.querySelector('#form')
+    // const formHeight = form.offsetTop
     document.addEventListener('scroll',()=>{
-        let scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
-        scrollTop > formHeight ? 
-            cta.style.display = "none" : cta.style.display = "block"
+        // let scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+        let formHeight = form.getBoundingClientRect().top;
+        // console.log('scrollTop'+scrollTop)
+        console.log('formHeight'+formHeight)
+
+        formHeight < 0 ? 
+        ctaMobile.style.display = "none" : ctaMobile.style.display = "block"
+    })
+
+
+
+    const cta = document.querySelectorAll('.cta')
+    const body = document.querySelector('body')
+    cta.forEach(()=>{
+        addEventListener('click',(e)=>{
+            e.preventDefault();
+        form.scrollIntoView({
+            behavior: 'smooth'
+        });
+    })
     })
  

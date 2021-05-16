@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 $light-yellow: rgb(255, 246, 217);
 $light-yellow2: #fcdd76;
 $strong-yellow: #F2BD1D;
@@ -9,14 +11,41 @@ $green: #BADDB4;
 body {
     background: $light-yellow;
     color: $blue;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans TC';
     font-size: 20px;
     line-height: 30px;
     width: 100%;
     box-sizing: border-box;
+    transition: 1s;
 
 
 }
+
+
+html {
+    --scrollbarBG: $light-yellow2;
+    --thumbBG: $strong-yellow;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $strong-yellow;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
 
 h1 {
     font-size: 60px;
@@ -43,51 +72,7 @@ a:visited {
     color: $blue;
 }
 
-button {
-    background: $strong-yellow;
-    position: relative;
-    width: 200px;
-    border-radius: 40px;
-    padding: 15px;
-    font-size: 24px;
-    font-family: 'Noto Sans TC', sans-serif;
-    transition: 0.8s;
 
-    span {
-        position: relative;
-        z-index: 1;
-
-    }
-
-    // https://ishadeed.com/article/clip-path/?fbclid=IwAR3tDgOJjQBu7uSITdGZifd4kWLJx3zqG8hCcFm6h9431L-kWhNvoDQl2qI
-
-    &:before {
-        content: "";
-        position: absolute;
-        border-radius: 40px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        opacity: 0;
-        clip-path: circle(0 at left);
-        transition: 0.3s ease-out;
-    }
-
-    &:hover:before {
-        opacity: 0.5;
-        clip-path: circle(100px at center);
-    }
-
-    &:hover {
-        box-shadow: 5px 5px 8px rgba(32, 32, 32, 0.3);
-        color: $red;
-        // font-weight: bold;
-    }
-
-
-}
 
 .title {
     // border-width: 5px;
