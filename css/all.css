@@ -404,9 +404,18 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .hero .left .card-wrapper .flower {
-    -webkit-transform: rotate(183deg) scale(0.8);
-            transform: rotate(183deg) scale(0.8);
-    left: -8%;
+    -webkit-transform: rotate(180deg) scale(0.8);
+            transform: rotate(180deg) scale(0.8);
+    left: -5%;
+    bottom: -50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero .left .card-wrapper .flower {
+    -webkit-transform: rotate(180deg) scale(0.7);
+            transform: rotate(180deg) scale(0.7);
+    left: -15%;
     bottom: -50%;
   }
 }
@@ -452,6 +461,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .hero .left .card-wrapper .card:nth-child(2) {
+    left: 55%;
     -webkit-transform: rotate(-5deg) translate(-45%, 0%) scale(0.6);
             transform: rotate(-5deg) translate(-45%, 0%) scale(0.6);
   }
@@ -468,6 +478,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .hero .left .card-wrapper .card:nth-child(3) {
+    left: 55%;
     -webkit-transform: rotate(1deg) translate(-45%, 0%) scale(0.6);
             transform: rotate(1deg) translate(-45%, 0%) scale(0.6);
   }
@@ -484,6 +495,8 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .hero .left .card-wrapper .card:nth-child(4) {
+    left: 55%;
+    top: -5%;
     -webkit-transform: rotate(-11deg) translate(-50%, 0%) scale(0.6);
             transform: rotate(-11deg) translate(-50%, 0%) scale(0.6);
   }
@@ -500,6 +513,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .hero .left .card-wrapper .card:nth-child(5) {
+    left: 55%;
     -webkit-transform: rotate(-4deg) translate(-43%, 0%) scale(0.6);
             transform: rotate(-4deg) translate(-43%, 0%) scale(0.6);
   }

@@ -133,8 +133,14 @@
         z-index: 6;
 
         @media screen and (max-width:768px) {
-          transform: rotate(183deg) scale(0.8);
-          left: -8%;
+          transform: rotate(180deg) scale(0.8);
+          left: -5%;
+          bottom: -50%;
+        }
+
+        @media screen and (max-width:320px) {
+          transform: rotate(180deg) scale(0.7);
+          left: -15%;
           bottom: -50%;
         }
       }
@@ -172,6 +178,7 @@
           z-index: 4;
 
           @media screen and (max-width:768px) {
+            left: 55%;
             transform: rotate(-5deg) translate(-45%, 0%) scale(.6);
           }
         }
@@ -184,6 +191,7 @@
           z-index: 3;
 
           @media screen and (max-width:768px) {
+            left: 55%;
             transform: rotate(1deg) translate(-45%, 0%) scale(0.6);
           }
         }
@@ -196,6 +204,8 @@
           z-index: 2;
 
           @media screen and (max-width:768px) {
+            left: 55%;
+            top: -5%;
             transform: rotate(-11deg) translate(-50%, 0%) scale(.6);
           }
         }
@@ -208,6 +218,7 @@
           z-index: 1;
 
           @media screen and (max-width:768px) {
+            left: 55%;
             transform: rotate(-4deg) translate(-43%, 0%) scale(0.6)
           }
         }

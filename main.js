@@ -50,20 +50,25 @@ setInterval(()=>{
 
 
     const ctaMobile = document.querySelector('.mobile.cta')
-    const form = document.querySelector('#form')
+    const carousel = document.querySelector('#carousel')
     // const formHeight = form.offsetTop
     document.addEventListener('scroll',()=>{
         // let scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
-        let formHeight = form.getBoundingClientRect().top;
-        // console.log('scrollTop'+scrollTop)
-        console.log('formHeight'+formHeight)
+        let carouselHeight = form.getBoundingClientRect().top;
+        let screenWidth = window.screen.width;
+        
+        // console.log('carousel:'+carouselHeight)
+        // console.log('screenWidth:'+screenWidth)
 
-        formHeight < 0 ? 
+        if(screenWidth < 769){
+            carouselHeight < 1130 ? 
         ctaMobile.style.display = "none" : ctaMobile.style.display = "block"
+        }
+        
     })
 
 
-
+    const form = document.querySelector('#form')
     const cta = document.querySelectorAll('.cta')
     const body = document.querySelector('body')
     cta.forEach(()=>{
