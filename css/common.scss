@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
-$light-yellow: rgb(255, 246, 217);
+$light-yellow: #fff6d9;
 $light-yellow2: #fcdd76;
 $strong-yellow: #F2BD1D;
 $blue: #13238B;
@@ -75,9 +75,6 @@ a:visited {
 
 
 .title {
-    // border-width: 5px;
-    // border-color: $red;
-    // border-style: double none;
     padding: 15px;
     margin: 12px;
     border-top: 15px solid transparent;
@@ -244,4 +241,14 @@ input:-webkit-autofill {
 
 textarea {
     height: 60px;
+}
+
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.w-100 {
+    width: 100%;
 }

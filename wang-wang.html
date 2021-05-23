@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信惠＆彥銘文定之喜</title>
+    <title>信惠＆彥茗文定之喜</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/all.css">
@@ -14,8 +14,8 @@
 <body class="position-relative">
     <div class="hero">
         <div class="sec display-flex justify-content-center align-items-center">
-            <div class="mobile cta text-center">
-                <button><a href="#form">我要&ensp;&ensp;<br>參加！</a></button>
+            <div class="mobile cta text-center align-items-center">
+                <a href="#form">我要&ensp;&ensp;<br>參加！</a>
             </div>
             <div class="left position-relative display-flex align-items-center slider ">
                 <div class="card-wrapper position-relative slider-container" id="slider">
@@ -131,17 +131,18 @@
         <div class="row display-flex justify-content-center align-items-center">
 
 
-            <div class="wrapper display-flex flex-column align-items-center justify-content-center">
+            <div class="wrapper display-flex flex-column align-items-center justify-content-center position-relative">
                 <picture class="parents-1">
                 </picture>
                 <div>
                     <div class="parent-title">彥茗父母</div>
                     <div class="parent-name">王國安 & 郭愛玉</div>
                 </div>
+                <div class="deco-vege position-absolute mobile"></div>
             </div>
 
 
-            <div class="content-wrapper text-center display-flex flex-column align-items-center">
+            <div class="content-wrapper text-center display-flex flex-column align-items-center position-relative">
                 <div class="title desktop">
                     <h2>感恩父母 & 蔬食祝福</h2>
                 </div>
@@ -158,14 +159,16 @@
                 </div>
                 <div class="vege mt-30 desktop">
                 </div>
+                <div class="deco-vege position-absolute mobile"></div>
             </div>
-            <div class="wrapper display-flex flex-column align-items-center justify-content-center">
+            <div class="wrapper display-flex flex-column align-items-center justify-content-center position-relative">
                 <picture class="parents-2">
                 </picture>
                 <div>
                     <div class="parent-title">信惠父母</div>
                     <div class="parent-name">王茂富 & 林秀鶯</div>
                 </div>
+                <div class="deco-vege position-absolute mobile"></div>
             </div>
         </div>
 
@@ -183,7 +186,6 @@
         </div>
     </div>
 
-
     <!-- Sec 3 -->
     <div class="sec sec-3 display-flex justify-content-end  position-relative">
         <div class="right display-flex flex-column align-items-center justify-content-end">
@@ -191,6 +193,7 @@
                 <div class="title mb-30 text-center">
                     <h2>時間與地點</h2>
                 </div>
+                <div class="deco-leaf position-absolute"></div>
                 <div class="des">
                     <li>2021/07/18 (日) 10:30 開放入場<br></li>
                     <li>台中 林皇宮 花園酒店<br></li>
@@ -201,6 +204,7 @@
                 <iframe class="mt-30"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14561.036463214006!2d120.6483847!3d24.1626438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5fa8741cb3c07d7!2z5p6X55qH5a6u6Iqx5ZyS!5e0!3m2!1szh-TW!2stw!4v1618755617241!5m2!1szh-TW!2stw"
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="deco-flower position-absolute"></div>
             </div>
             <div class="carousel position-relative" id="carousel">
                 <div class="img position-absolute"></div>
@@ -209,86 +213,36 @@
                 <div class="img position-absolute"></div>
 
             </div>
-            <div class="card display-flex justify-content-center" id="form">
-                <iframe
+
+            <div class="card display-flex justify-content-center flex-column align-items-center" id="form">
+                <div class="title mb-30 text-center">
+                    <h2>出席統計</h2>
+                </div>
+                <!-- <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSeeBzp5fMTCiEt6kprKvlzktStFTUAeRUgAbRaImwzoJQdYMw/viewform?embedded=true"
-                    width="640" height="680" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-                <!-- <form id="form" onsubmit="postForm()" method="get" class="display-flex flex-column align-items-center">
-                    <div class="title text-center">
-                        <h2>出席統計</h2>
-                    </div>
-                    <div class="question-wrapper">
-                        <div class="question display-flex flex-column">
-                            <label for="">1.請問您的大名？</label>
-                            <input name="nameValue" type="text" required>
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">2.請問您與新人的關係？</label>
-                            <select name="relationValue" id="">
-                                <option value="">--請選擇--</option>
-                                <option value="新娘信惠父母的朋友">新娘信惠父母的朋友</option>
-                                <option value="新娘信惠的朋友">新娘信惠的朋友</option>
-                            </select>
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">3.共幾個人出席？</label>
-                            <select name="attendanceValue" id="" required>
-                                <option value="">--請選擇--</option>
-                                <option value="0">不方便出席，送上祝福</option>
-                                <option value="1">1人</option>
-                                <option value="2">2人</option>
-                                <option value="3">3人</option>
-                                <option value="4">4人</option>
-                                <option value="5">5人</option>
-                                <option value=">6">6人以上</option>
-                            </select>
-
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">4.需要幾張兒童座椅？</label>
-                            <select name="childrenChairValue" id="">
-                                <option value="">--請選擇--</option>
-                                <option value="0">不需要</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value=">6">6張以上</option>
-                            </select>
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">5.想要如何收到喜帖？</label>
-                            <select name="receiveMethodValue" id="">
-                                <option value="">--請選擇--</option>
-                                <option value="紙本喜帖">紙本喜帖(請務必填寫寄送地址)</option>
-                                <option value="電子喜帖">電子喜帖(請務必填寫電子信箱)</option>
-                                <option value="紙本和電子喜帖">紙本和電子喜帖(請務必填寫地址和信箱)</option>
-                            </select>
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">6.您的Email？（電子喜帖必填）</label>
-                            <input name="emailValue" type="email">
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">7.您的地址？（紙本喜帖必填）</label>
-                            <div id="twzipcode" name="addressValue"></div>
-                            <input name="addressValue" type="text">
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">8.請問您的聯絡電話？</label>
-                            <input name="phoneValue" type="text" required>
-                        </div>
-                        <div class="question display-flex flex-column">
-                            <label for="">9.有什麼話想要對我們說的嗎？</label>
-                            <textarea name="messageValue" id="" cols="30" rows="5"></textarea>
-                        </div>
-                    </div>
-                    <button class="mt-30">送出</button>
-                </form> -->
-
-
+                    width="640" height="680" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe> -->
+                <div class="typeform-widget"
+                    data-url="https://form.typeform.com/to/bJ6ne0Uo?typeform-medium=embed-snippet"
+                    style="width: 100%; height: 480px;"></div>
+                <script>
+                    (function () {
+                        var qs, js, q, s, d = document,
+                            gi = d.getElementById,
+                            ce = d.createElement,
+                            gt = d.getElementsByTagName,
+                            id = "typef_orm",
+                            b = "https://embed.typeform.com/";
+                        if (!gi.call(d, id)) {
+                            js = ce.call(d, "script");
+                            js.id = id;
+                            js.src = b + "embed.js";
+                            q = gt.call(d, "script")[0];
+                            q.parentNode.insertBefore(js, q)
+                        }
+                    })()
+                </script>
             </div>
+            <div class="deco position-absolute"></div>
         </div>
 
     </div>
@@ -304,12 +258,16 @@
     <!-- <script src="./supportCheck.js"></script> -->
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script src="./main.js"></script>
-    <script src="./order.js"></script>
+    <!-- <script src="./order.js"></script> -->
+
+    <div class="loading display-flex justify-content-center align-items-center">
+        <img src="./img/flower.svg" alt="">
+    </div>
 
 
 </body>

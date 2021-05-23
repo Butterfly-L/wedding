@@ -267,4 +267,14 @@ input:-webkit-autofill {
 textarea {
   height: 60px;
 }
+
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.w-100 {
+  width: 100%;
+}
 /*# sourceMappingURL=common.css.map */

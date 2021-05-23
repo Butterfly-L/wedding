@@ -1,3 +1,13 @@
+window.onload=function (){
+    const loading = document.querySelector('.loading')
+    loading.classList.add('disapear')
+    window.setTimeout(()=>{
+        loading.style.display = 'none'
+        loading.classList.remove('disapear')
+    },1000)
+
+}
+
 let cardNo = [4,3,2,1,0]
 
 heroBg = function(){
@@ -28,7 +38,6 @@ heroBg = function(){
     
 }
 
-
 let mobieBgIndex = 0
 endMobileBg = function(){
     const cards = document.querySelectorAll('.carousel>.img');
@@ -51,18 +60,14 @@ setInterval(()=>{
 
     const ctaMobile = document.querySelector('.mobile.cta')
     const carousel = document.querySelector('#carousel')
-    // const formHeight = form.offsetTop
+
     document.addEventListener('scroll',()=>{
-        // let scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
         let carouselHeight = form.getBoundingClientRect().top;
         let screenWidth = window.screen.width;
-        
-        // console.log('carousel:'+carouselHeight)
-        // console.log('screenWidth:'+screenWidth)
 
         if(screenWidth < 769){
             carouselHeight < 1130 ? 
-        ctaMobile.style.display = "none" : ctaMobile.style.display = "block"
+        ctaMobile.style.display = "none" : ctaMobile.style.display = "flex"
         }
         
     })
@@ -73,10 +78,17 @@ setInterval(()=>{
     const body = document.querySelector('body')
     cta.forEach(()=>{
         addEventListener('click',(e)=>{
+            ctaMobile.style.animation = "mobile-button 1s ease-in";
             e.preventDefault();
-        form.scrollIntoView({
-            behavior: 'smooth'
-        });
+            window.setTimeout(()=>{
+                form.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }, 300)
+
+        window.setTimeout(()=>{
+            ctaMobile.style.animation = "";
+        }, 1000)
     })
     })
  
