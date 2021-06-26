@@ -474,7 +474,7 @@
     opacity: 0;
     left: 75%;
     transition: 3s;
-    
+
     @media screen and (min-width:768px) {
     animation: light1 10s ease-in-out infinite;
   }
@@ -511,6 +511,20 @@
       animation-delay: 1s;
   }
     }
+  }
+
+  .light-mobile{
+    width: 100px;
+    height: 100%;
+    transform: skew(20deg);
+    background-color: $light-yellow2;
+    left: 75%;
+
+    &:nth-child(3){
+      width: 50px;
+
+    }
+
   }
 }
 
@@ -675,6 +689,7 @@
       z-index: 2;
 
       @media screen and (max-width:768px) {
+      animation:none;
         transform: scale(.6);
         margin-top: -130px;
       }
@@ -712,6 +727,7 @@
 
         @media screen and (max-width:768px) {
           transform: scale(.6);
+          animation: none;
         }
 
       }

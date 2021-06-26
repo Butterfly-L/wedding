@@ -857,6 +857,19 @@ textarea {
   }
 }
 
+.light-wrapper .light-mobile {
+  width: 100px;
+  height: 100%;
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  background-color: #fcdd76;
+  left: 75%;
+}
+
+.light-wrapper .light-mobile:nth-child(3) {
+  width: 50px;
+}
+
 @-webkit-keyframes light1 {
   0% {
     width: 50px;
@@ -1056,6 +1069,8 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .sec-1 .row .picture {
+    -webkit-animation: none;
+            animation: none;
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     margin-top: -130px;
@@ -1102,6 +1117,8 @@ textarea {
   .sec-1 .row .content-wrapper .picture {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
